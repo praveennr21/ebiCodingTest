@@ -1,6 +1,5 @@
 from flask import Flask,request,abort
 import json
-import requests
 import mysql.connector
 
 app = Flask(__name__)
