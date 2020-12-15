@@ -18,9 +18,9 @@ def get_genes(lookup, species):
         abort(400)
     
     if species:
-        sqlStr = "SELECT display_label,location,stable_id,species FROM gene_autocomplete where display_label like '%" + lookup + "%' and species = '"+species+"' limit 3"
+        sqlStr = "SELECT display_label,location,stable_id,species FROM gene_autocomplete where display_label like '%" + lookup + "%' and species = '"+species+"'"
     else:
-        sqlStr = "SELECT display_label,location,stable_id,species FROM gene_autocomplete where display_label like '%" + lookup + "%' limit 3"
+        sqlStr = "SELECT display_label,location,stable_id,species FROM gene_autocomplete where display_label like '%" + lookup + "%'"
     
     mycur.execute(sqlStr)
     rs = mycur.fetchall()
